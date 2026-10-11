@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIPA-UNVES · Prototipo</title>
+<style>
+:root{--bg:#fff;--cd:#f6f6f4;--tx:#1a1a18;--t2:#5f5e5a;--bd:#d9d8d2;--ac:#185FA5;--ab:#E6F1FB;--ok:#27500A;--ob:#EAF3DE;--wa:#633806;--wb:#FAEEDA;--er:#791F1F;--eb:#FCEBEB;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1c1a;--cd:#262624;--tx:#f1efe8;--t2:#b4b2a9;--bd:#444441;--ac:#85B7EB;--ab:#0C447C;--ok:#C0DD97;--ob:#27500A;--wa:#FAC775;--wb:#633806;--er:#F7C1C1;--eb:#791F1F;--on:#042C53}}
+:root[data-theme="dark"]{--bg:#1c1c1a;--cd:#262624;--tx:#f1efe8;--t2:#b4b2a9;--bd:#444441;--ac:#85B7EB;--ab:#0C447C;--ok:#C0DD97;--ob:#27500A;--wa:#FAC775;--wb:#633806;--er:#F7C1C1;--eb:#791F1F;--on:#042C53}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--bd)}
+header b{font-size:17px;font-weight:600;margin-right:auto}
+label{font-size:12px;color:var(--t2);display:flex;flex-direction:column;gap:2px}
+select,input{font:inherit;padding:6px 8px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);max-width:100%}
+nav{display:flex;gap:4px;padding:8px 16px;border-bottom:1px solid var(--bd);overflow-x:auto}
+nav button{border:0;background:none;color:var(--t2);padding:8px 14px;border-radius:8px;font:inherit;cursor:pointer;white-space:nowrap}
+nav button.on{background:var(--ab);color:var(--ac);font-weight:600}
+main{padding:16px;max-width:980px;margin:0 auto}
+.note{background:var(--wb);color:var(--wa);padding:8px 16px;font-size:13px}
+.k{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:14px}
+.m{background:var(--cd);border-radius:10px;padding:10px 14px}.m span{display:block;font-size:12px;color:var(--t2)}.m b{font-size:18px;font-weight:600}
+.w{overflow-x:auto;border:1px solid var(--bd);border-radius:10px;margin-bottom:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--bd);white-space:nowrap}
+th{font-weight:500;color:var(--t2);font-size:12px}tr:last-child td{border-bottom:0}
+button{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--bg);color:var(--tx);padding:5px 12px;border-radius:8px}
+button.p{background:var(--ac);color:var(--on);border-color:transparent}
+.b{display:inline-block;font-size:12px;padding:2px 8px;border-radius:8px}
+.ok{background:var(--ob);color:var(--ok)}.wa{background:var(--wb);color:var(--wa)}.er{background:var(--eb);color:var(--er)}.in{background:var(--ab);color:var(--ac)}
+.f{display:flex;flex-wrap:wrap;gap:10px;align-items:end;background:var(--cd);padding:12px;border-radius:10px;margin-bottom:14px}
+h2{font-size:16px;font-weight:600;margin:0 0 10px}
+.bar{height:10px;border-radius:5px;background:var(--ac);min-width:2px}.bar.r{background:var(--er)}
+.rw{display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:center;font-size:13px;margin-bottom:6px}
+.mo{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:16px;z-index:9}
+.mo[hidden]{display:none}
+.mc{background:var(--bg);border-radius:12px;padding:18px;width:100%;max-width:420px;max-height:90vh;overflow:auto}
+.mc p{margin:6px 0;display:flex;justify-content:space-between;gap:10px}
+.er2{color:var(--er);font-size:13px;min-height:18px}
+#ts{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:8px 16px;border-radius:8px;font-size:14px;z-index:10}
+#ts[hidden]{display:none}
+</style>
+</head>
+<body>
+<header>
+<b>SIPA-UNVES</b>
+<label>Facultad<select id="fs"></select></label>
+<label>Ingresar como<select id="rs"><option value="alumno">Alumno</option><option value="tesoreria">Tesorería</option><option value="finanzas">Finanzas (admin)</option></select></label>
+</header>
+<div class="note">Prototipo con datos simulados: el SSO, la pasarela, el SIFEN y el banco están representados, no conectados.</div>
+<nav id="nv"></nav>
+<main id="v"></main>
+<div class="mo" id="md" hidden><div class="mc" id="mb"></div></div>
+<div id="ts" hidden></div>
+<script>
+const $=s=>document.querySelector(s),day=864e5,now=Date.now();
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const gs=n=>'Gs. '+Math.round(n).toLocaleString('es-PY');
+const fd=t=>new Date(t).toLocaleDateString('es-PY',{day:'2-digit',month:'short'});
+const rnd=()=>Array.from({length:44},()=>Math.floor(Math.random()*10)).join('');
+const FACS=['Politécnica','Ciencias de la Salud','Jurídicas','Económicas','Humanidades','Agrarias','Arquitectura'];
+const slaH=f=>f==='Ciencias de la Salud'?24:48;
+let id=100,fn=7;
+const S={fac:FACS[0],rol:'alumno',tab:'pagos',rules:{},ob:[],pagos:[],tk:[],tr:[]};
+FACS.forEach((f,i)=>{
+ const b=450000+i*30000;
+ S.rules[f]={rec:2,desc:5,c:[['Cuota mensual',b],['Derecho a examen',120000],['Constancia de estudios',30000],['Certificado de estudios',60000]]};
+ [['Cuota 4',-5],['Cuota 5',12],['Cuota 6',42]].forEach(([n,o])=>S.ob.push({id:++id,fac:f,n,k:'Cuota mensual',m:b,due:now+o*day,st:'Pendiente'}));
+ S.ob.push({id:++id,fac:f,n:'Derecho a examen',k:'Derecho a examen',m:120000,due:now+3*day,st:'Pendiente'});
+ S.pagos.push({id:++id,fac:f,n:'Cuota 3',t:b*(i+2),mt:'Transferencia',ruc:'—',f:now-20*day,c:true,fn:'001-001-'+String(i+1).padStart(7,'0'),cdc:rnd()});
+});
+S.tk.push({id:++id,fac:FACS[0],asunto:'Aclaración de recibo',cat:'Reclamo',t:now-10*36e5,st:'Abierto'},{id:++id,fac:FACS[0],asunto:'Solicitud de beca',cat:'Beca',t:now-30*36e5,st:'Abierto'},{id:++id,fac:FACS[1],asunto:'Constancia no habilitada',cat:'Reclamo',t:now-20*36e5,st:'Abierto'});
+const calc=o=>{if(o.st!=='Pendiente')return{m:o.m,a:o.adj,l:o.l,t:o.tot};const r=S.rules[o.fac],m=(r.c.find(x=>x[0]===o.k)||[0,o.m])[1],d=Math.ceil((o.due-Date.now())/day);let a=0,l='';if(d<0){a=m*r.rec/100;l='Recargo'}else if(d>=7){a=-m*r.desc/100;l='Pronto pago'}a=Math.round(a);return{m,a,l,t:m+a}};
+const bd=s=>`<span class="b ${/Pagado|Conciliado|Resuelto|Aprobada|En proceso/.test(s)?'ok':/Sin|Pendiente|Abierto/.test(s)?'wa':'in'}">${s}</span>`;
+const sla=t=>{if(t.st==='Resuelto')return bd('Resuelto');const l=slaH(t.fac)-(Date.now()-t.t)/36e5;return l<0?'<span class="b er">SLA vencido</span>':`<span class="b ${l<6?'wa':'ok'}">Quedan ${Math.floor(l)} h</span>`};
+const T={alumno:[['pagos','Mis pagos'],['tramites','Trámites'],['tickets','Tickets']],tesoreria:[['conc','Conciliación'],['fact','Facturas'],['tickets','Tickets']],finanzas:[['reglas','Reglas'],['rep','Reportes']]};
+const bar=(v,mx,c)=>`<div class="bar ${c||''}" style="width:${Math.max(2,v/mx*100)}%"></div>`;
+const V={
+pagos(){const L=S.ob.filter(o=>o.fac===S.fac),P=L.filter(o=>o.st==='Pendiente');
+ return `<div class=k><div class=m><span>Saldo pendiente</span><b>${gs(P.reduce((a,o)=>a+calc(o).t,0))}</b></div><div class=m><span>Obligaciones pendientes</span><b>${P.length}</b></div><div class=m><span>Facultad</span><b>${esc(S.fac)}</b></div></div>
+ <div class=w><table><tr><th>Concepto<th>Vence<th>Monto<th>Ajuste<th>Total<th>Estado<th></tr>${L.map(o=>{const c=calc(o);return `<tr><td>${esc(o.n)}<td>${fd(o.due)}<td>${gs(c.m)}<td>${c.a?c.l+' '+gs(c.a):'—'}<td>${gs(c.t)}<td>${bd(o.st)}<td>${o.st==='Pendiente'?`<button class=p data-a=pay data-i=${o.id}>Pagar</button>`:''}`}).join('')}</table></div>`},
+tramites(){const R=S.rules[S.fac].c.filter(x=>!/Cuota|Derecho/.test(x[0]));
+ return `<div class=f><label>Tipo de trámite<select id=tt>${R.map(x=>`<option>${esc(x[0])}</option>`).join('')}</select></label><button class=p data-a=tr>Solicitar</button></div>
+ <div class=w><table><tr><th>Trámite<th>Solicitado<th>Estado</tr>${S.tr.filter(x=>x.fac===S.fac).map(x=>`<tr><td>${esc(x.n)}<td>${fd(x.f)}<td>${bd(x.st)}`).join('')||'<tr><td colspan=3>Aún no hay trámites. Solicita el primero.'}</table></div><p style="font-size:13px;color:var(--t2)">Al solicitar, se genera una obligación de pago. Con el pago confirmado, el trámite pasa a "En proceso".</p>`},
+tickets(){const al=S.rol==='alumno';
+ return `${al?`<div class=f><label>Asunto<input id=ta placeholder="Describe tu consulta"></label><label>Categoría<select id=tc><option>Consulta</option><option>Reclamo</option><option>Beca</option><option>Recibo</option></select></label><button class=p data-a=tk>Abrir ticket</button></div>`:''}
+ <div class=w><table><tr><th>Asunto<th>Categoría<th>Facultad<th>SLA (${slaH(S.fac)} h)<th></tr>${S.tk.filter(t=>t.fac===S.fac).map(t=>`<tr><td>${esc(t.asunto)}<td>${t.cat}<td>${esc(t.fac)}<td>${sla(t)}<td>${!al&&t.st!=='Resuelto'?`<button data-a=rs data-i=${t.id}>Resolver</button>`:''}`).join('')||'<tr><td colspan=5>Sin tickets en esta facultad.'}</table></div>`},
+conc(){const L=S.pagos.filter(p=>p.fac===S.fac),sc=L.filter(p=>!p.c);
+ return `<div class=k><div class=m><span>Recaudado</span><b>${gs(L.reduce((a,p)=>a+p.t,0))}</b></div><div class=m><span>Sin conciliar</span><b>${sc.length}</b></div></div>${sc.length?'<p><button class=p data-a=call>Conciliar todo con el extracto</button></p>':''}
+ <div class=w><table><tr><th>Fecha<th>Concepto<th>Monto<th>Medio<th>Estado<th></tr>${L.map(p=>`<tr><td>${fd(p.f)}<td>${esc(p.n)}<td>${gs(p.t)}<td>${p.mt}<td>${bd(p.c?'Conciliado':'Sin conciliar')}<td>${p.c?'':`<button data-a=cp data-i=${p.id}>Conciliar</button>`}`).join('')}</table></div>`},
+fact(){return `<div class=w><table><tr><th>N.º<th>CDC (simulado)<th>RUC o CI<th>Total<th>IVA 10%<th>Estado</tr>${S.pagos.filter(p=>p.fac===S.fac).map(p=>`<tr><td>${p.fn}<td>${p.cdc.slice(0,14)}…<td>${esc(p.ruc)}<td>${gs(p.t)}<td>${gs(p.t/11)}<td>${bd('Aprobada')}`).join('')}</table></div>`},
+reglas(){const r=S.rules[S.fac];
+ return `<h2>Tarifas de ${esc(S.fac)}</h2><div class=w><table><tr><th>Concepto<th>Monto (Gs.)</tr>${r.c.map((x,i)=>`<tr><td>${esc(x[0])}<td><input type=number min=0 step=1000 value=${x[1]} data-c=m data-i=${i}>`).join('')}</table></div>
+ <div class=f><label>Recargo por mora (%)<input type=number min=0 value=${r.rec} data-c=rec style="width:90px"></label><label>Descuento por pronto pago (%)<input type=number min=0 value=${r.desc} data-c=desc style="width:90px"></label></div>
+ <div class=f><label>Nuevo concepto<input id=nn></label><label>Monto<input id=nm type=number min=0 style="width:120px"></label><button class=p data-a=nc>Agregar</button></div>
+ <p style="font-size:13px;color:var(--t2)">Los cambios se aplican de inmediato a las obligaciones pendientes. Entra como alumno para verlo.</p>`},
+rep(){const D=FACS.map(f=>({f,rec:S.pagos.filter(p=>p.fac===f).reduce((a,p)=>a+p.t,0),mor:S.ob.filter(o=>o.fac===f&&o.st==='Pendiente'&&o.due<Date.now()).reduce((a,o)=>a+calc(o).t,0)})),mx=Math.max(...D.map(d=>Math.max(d.rec,d.mor)),1);
+ return `<h2>Recaudación por facultad</h2>${D.map(d=>`<div class=rw><span>${esc(d.f)}</span><div>${bar(d.rec,mx)}<small>${gs(d.rec)}</small></div></div>`).join('')}<h2 style="margin-top:18px">Morosidad por facultad</h2>${D.map(d=>`<div class=rw><span>${esc(d.f)}</span><div>${bar(d.mor,mx,'r')}<small>${gs(d.mor)}</small></div></div>`).join('')}`}
+};
+function render(){$('#nv').innerHTML=T[S.rol].map(([k,n])=>`<button class="${S.tab===k?'on':''}" data-a=tab data-i=${k}>${n}</button>`).join('');$('#v').innerHTML=V[S.tab]()}
+const toast=m=>{const t=$('#ts');t.textContent=m;t.hidden=false;setTimeout(()=>t.hidden=true,2200)};
+const modal=h=>{$('#mb').innerHTML=h;$('#md').hidden=false};
+const A={
+tab:i=>{S.tab=i;render()},
+pay(i){const o=S.ob.find(x=>x.id==i),c=calc(o);modal(`<h2>Pagar: ${esc(o.n)}</h2><p><span>Monto</span><span>${gs(c.m)}</span></p><p><span>${c.l||'Ajuste'}</span><span>${gs(c.a)}</span></p><p><b>Total</b><b>${gs(c.t)}</b></p><label>Medio de pago<select id=mt><option>Tarjeta</option><option>QR bancario</option><option>Billetera</option><option>Transferencia</option></select></label><br><label>RUC o CI para la factura<input id=ruc placeholder="1234567-8"></label><div class=er2 id=er></div><p><button data-a=x>Cancelar</button><button class=p data-a=ok data-i=${i}>Confirmar pago</button></p>`)},
+ok(i){const o=S.ob.find(x=>x.id==i),c=calc(o),ruc=$('#ruc').value.trim();if(!ruc){$('#er').textContent='Ingresa tu RUC o CI.';return}
+ Object.assign(o,{st:'Pagado',m:c.m,adj:c.a,l:c.l,tot:c.t});const n='001-001-'+String(++fn).padStart(7,'0');
+ S.pagos.push({id:++id,fac:o.fac,n:o.n,t:c.t,mt:$('#mt').value,ruc,f:Date.now(),c:false,fn:n,cdc:rnd()});
+ S.tr.forEach(x=>{if(x.oid===o.id)x.st='En proceso'});
+ modal(`<h2>Pago acreditado</h2><p><span>Concepto</span><span>${esc(o.n)}</span></p><p><span>Total</span><span>${gs(c.t)}</span></p><p><span>Factura</span><span>${n}</span></p><p style="color:var(--t2);font-size:13px">Se generó la factura y el pago quedó a la espera de conciliación en Tesorería.</p><p><button class=p data-a=x>Cerrar</button></p>`);render()},
+x(){$('#md').hidden=true},
+tr(){const k=$('#tt').value,m=S.rules[S.fac].c.find(x=>x[0]===k)[1],o={id:++id,fac:S.fac,n:k,k,m,due:Date.now()+2*day,st:'Pendiente'};S.ob.push(o);S.tr.push({id:++id,fac:S.fac,n:k,oid:o.id,st:'Pendiente de pago',f:Date.now()});toast('Trámite solicitado. Paga la obligación para continuar.');render()},
+tk(){const a=$('#ta').value.trim();if(!a){toast('Escribe un asunto');return}S.tk.push({id:++id,fac:S.fac,asunto:a,cat:$('#tc').value,t:Date.now(),st:'Abierto'});toast('Ticket asignado a '+S.fac);render()},
+rs(i){S.tk.find(t=>t.id==i).st='Resuelto';render()},
+cp(i){S.pagos.find(p=>p.id==i).c=true;toast('Pago conciliado');render()},
+call(){S.pagos.forEach(p=>{if(p.fac===S.fac)p.c=true});toast('Pagos conciliados');render()},
+nc(){const n=$('#nn').value.trim(),m=+$('#nm').value;if(!n||m<=0){toast('Completa nombre y monto');return}S.rules[S.fac].c.push([n,m]);render()}
+};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(b)A[b.dataset.a](b.dataset.i)});
+document.addEventListener('change',e=>{const d=e.target.dataset.c;if(!d)return;const r=S.rules[S.fac],v=Math.max(0,+e.target.value||0);if(d==='m')r.c[e.target.dataset.i][1]=v;else r[d]=v;toast('Regla actualizada')});
+$('#fs').innerHTML=FACS.map(f=>`<option>${f}</option>`).join('');
+$('#fs').onchange=e=>{S.fac=e.target.value;render()};
+$('#rs').onchange=e=>{S.rol=e.target.value;S.tab=T[S.rol][0][0];render()};
+render();
+</script>
+</body>
+</html>
