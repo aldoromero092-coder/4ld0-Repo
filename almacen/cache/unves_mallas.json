@@ -1,0 +1,960 @@
+{
+ "/facultades/politecnica/carreras/ingenieria-electrica": {
+  "nombre": "Ingeniería Eléctrica",
+  "filas": [
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "IE01",
+    "materia": "Algebra Lineal y Vectorial",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "IE07",
+    "materia": "Calculo II",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "IE02",
+    "materia": "Geometría Analítica",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "IE08",
+    "materia": "Física I",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "IE03",
+    "materia": "Calculo I",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "IE09",
+    "materia": "Física II",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "IE04",
+    "materia": "Idioma",
+    "horas": 72
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "IE10",
+    "materia": "Informática Avanzada Para Ingeniería",
+    "horas": 72
+   },
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "IE05",
+    "materia": "Química",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "IE11",
+    "materia": "Seguridad en Ingeniería Eléctrica",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "IE06",
+    "materia": "Dibujo Técnico",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "IE12",
+    "materia": "Electrotecnia I",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "IE13",
+    "materia": "Calculo III",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "IE19",
+    "materia": "Calculo IV",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "IE14",
+    "materia": "Física III",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "IE20",
+    "materia": "Física IV",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "IE15",
+    "materia": "Estadística",
+    "horas": 72
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "IE21",
+    "materia": "Física V",
+    "horas": 72
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "IE16",
+    "materia": "Circuitos Eléctricos I",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "IE22",
+    "materia": "Circuitos Eléctricos II",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "IE17",
+    "materia": "Resistencia de Materiales",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "IE23",
+    "materia": "Reglamentos de B.T. y M.T.",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "IE18",
+    "materia": "Electrotecnia II",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "IE24",
+    "materia": "Electrónica I",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "IE25",
+    "materia": "Calculo V",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "IE31",
+    "materia": "Calculo VI",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "IE26",
+    "materia": "Física VI",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "IE32",
+    "materia": "Física VII",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "IE27",
+    "materia": "Electrónica II",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "IE33",
+    "materia": "Instrumentación Industrial",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "IE28",
+    "materia": "Medidas Eléctricas y Magnéticas",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "IE34",
+    "materia": "Instalación Eléctrica II Industrial",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "IE29",
+    "materia": "Instalación Eléctrica I",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "IE35",
+    "materia": "Automatización y Control Industrial",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "IE30",
+    "materia": "Conversión de la Energía I",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "IE36",
+    "materia": "Electrónica Digital",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "IE37",
+    "materia": "Física VIII",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "IE43",
+    "materia": "Metodología de la Investigación I",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "IE38",
+    "materia": "Conversión de la Energía II Conversión de la Energía Eléctrica II",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "IE44",
+    "materia": "Sistemas de Potencia I",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "IE39",
+    "materia": "Electrónica de Potencia I",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "IE45",
+    "materia": "Mantenimientos Industriales",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "IE40",
+    "materia": "Medición de la Energía Eléctrica",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "IE46",
+    "materia": "Electrónica de Potencia II",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "IE41",
+    "materia": "Instalación Eléctrica III M.T.",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "IE47",
+    "materia": "Distribución de la Energía Eléctrica",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "IE42",
+    "materia": "Sistemas Neumáticos Industriales",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "IE48",
+    "materia": "Planean. y Control de la Calidad de Producción",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "IE49",
+    "materia": "Generación de Energía Eléctrica",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "IE55",
+    "materia": "Factibilidad de Sistemas Eléctricos",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "IE50",
+    "materia": "Redes Eléctricas",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "IE56",
+    "materia": "Protección de Sistemas Eléctricos",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "IE51",
+    "materia": "Sistemas de Potencia II",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "IE57",
+    "materia": "Ética Profesional",
+    "horas": 72
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "IE52",
+    "materia": "Administración y Organización de Empresa",
+    "horas": 72
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "IE58",
+    "materia": "Operación de Energía Eléctrica",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "IE53",
+    "materia": "Metodología de la Investigación II",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "IE59",
+    "materia": "Administración de Recursos Humanos",
+    "horas": 72
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "IE54",
+    "materia": "Subestaciones Transformadoras",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "IE60",
+    "materia": "Proyecto de Grado I",
+    "horas": 90
+   }
+  ]
+ },
+ "/facultades/politecnica/carreras/ingenieria-en-informatica": {
+  "nombre": "Ingeniería en informática",
+  "filas": [
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "ISI01",
+    "materia": "Matemática I",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "ISI06",
+    "materia": "Matemática II",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "ISI02",
+    "materia": "Computación I",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "ISI07",
+    "materia": "Computación II",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "ISI03",
+    "materia": "Informática I",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "ISI08",
+    "materia": "Informática II",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "ISI04",
+    "materia": "Algoritmia I",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "ISI09",
+    "materia": "Algoritmia II",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 1,
+    "codigo": "ISI05",
+    "materia": "Inglés",
+    "horas": 90
+   },
+   {
+    "curso": 1,
+    "semestre": 2,
+    "codigo": "ISI10",
+    "materia": "Programación I",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "ISI11",
+    "materia": "Matemática III",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "ISI16",
+    "materia": "Matemática IV",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "ISI12",
+    "materia": "Computación III",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "ISI17",
+    "materia": "Computación IV",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "ISI13",
+    "materia": "Programación II",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "ISI18",
+    "materia": "Programación III",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "ISI14",
+    "materia": "Lenguaje I",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "ISI19",
+    "materia": "Lenguajes II",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 3,
+    "codigo": "ISI15",
+    "materia": "Física I",
+    "horas": 90
+   },
+   {
+    "curso": 2,
+    "semestre": 4,
+    "codigo": "ISI20",
+    "materia": "Física II",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "ISI21",
+    "materia": "Matemática V",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "ISI26",
+    "materia": "Matemática VI",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "ISI22",
+    "materia": "Programación IV",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "ISI27",
+    "materia": "Programación V",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "ISI23",
+    "materia": "Análisis y Diseño de Sistemas",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "ISI28",
+    "materia": "Redes I",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "ISI24",
+    "materia": "Lenguajes III",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "ISI29",
+    "materia": "Estadística y Probabilidades",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 5,
+    "codigo": "ISI25",
+    "materia": "Administración I",
+    "horas": 90
+   },
+   {
+    "curso": 3,
+    "semestre": 6,
+    "codigo": "ISI30",
+    "materia": "Metodología de la Investigación I",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "ISI31",
+    "materia": "Computación V",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "ISI36",
+    "materia": "Computación VI",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "ISI32",
+    "materia": "Informática III",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "ISI37",
+    "materia": "Informática IV",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "ISI33",
+    "materia": "Investigación Operativa I",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "ISI38",
+    "materia": "Investigación Operativa II",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "ISI34",
+    "materia": "Metodología de la Investigación II",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "ISI39",
+    "materia": "Electrónica Digital I",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 7,
+    "codigo": "ISI35",
+    "materia": "Proyecto I",
+    "horas": 90
+   },
+   {
+    "curso": 4,
+    "semestre": 8,
+    "codigo": "ISI40",
+    "materia": "Proyecto II",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "ISI41",
+    "materia": "Redes II",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "ISI46",
+    "materia": "Sistemas Distribuidos",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "ISI42",
+    "materia": "Administración II",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "ISI47",
+    "materia": "Simulación de Sistemas de Control",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "ISI43",
+    "materia": "Ingeniería de Software I",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "ISI48",
+    "materia": "Ingeniería de Software II",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "ISI44",
+    "materia": "Electrónica Digital II",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "ISI49",
+    "materia": "Modelos y Sistemas de Optimización",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 9,
+    "codigo": "ISI45",
+    "materia": "Adm. de Sistemas de Información",
+    "horas": 90
+   },
+   {
+    "curso": 5,
+    "semestre": 10,
+    "codigo": "ISI50",
+    "materia": "Informática V",
+    "horas": 90
+   },
+   {
+    "curso": 6,
+    "semestre": 11,
+    "codigo": "ISI51",
+    "materia": "Cibernética",
+    "horas": 90
+   },
+   {
+    "curso": 6,
+    "semestre": 12,
+    "codigo": "ISI56",
+    "materia": "Auditoria Informática",
+    "horas": 90
+   },
+   {
+    "curso": 6,
+    "semestre": 11,
+    "codigo": "ISI52",
+    "materia": "Informática VI",
+    "horas": 90
+   },
+   {
+    "curso": 6,
+    "semestre": 12,
+    "codigo": "ISI57",
+    "materia": "Foros Informáticos",
+    "horas": 90
+   },
+   {
+    "curso": 6,
+    "semestre": 11,
+    "codigo": "ISI53",
+    "materia": "Inteligencia Artificial",
+    "horas": 90
+   },
+   {
+    "curso": 6,
+    "semestre": 12,
+    "codigo": "ISI58",
+    "materia": "Trabajo de Tesis II",
+    "horas": 90
+   }
+  ]
+ },
+ "/facultades/Ingenieria/carreras/ingenieria-ambiental": {
+  "nombre": "Ingeniería Ambiental",
+  "filas": []
+ },
+ "/facultades/Ingenieria/carreras/arquitectura": {
+  "nombre": "Arquitectura",
+  "filas": []
+ },
+ "/facultades/filosofia/carreras/licenciatura-en-ciencias-de-la-educacion": {
+  "nombre": "Licenciatura en Ciencias de la Educación",
+  "filas": []
+ },
+ "/facultades/filosofia/carreras/licenciatura-en-ciencias-de-la-comunicacion": {
+  "nombre": "Licenciatura en Ciencias de la Comunicación",
+  "filas": []
+ },
+ "/facultades/filosofia/carreras/licenciatura-en-gestion-publica": {
+  "nombre": "Licenciatura en Gestión Educativa",
+  "filas": []
+ },
+ "/facultades/filosofia/carreras/licenciatura-en-ingles": {
+  "nombre": "Licenciatura en Ingles",
+  "filas": []
+ },
+ "/facultades/juridicas/carreras/derecho": {
+  "nombre": "Derecho",
+  "filas": []
+ },
+ "/facultades/quimicas/carrera/ingenieria-quimica": {
+  "nombre": "Ingeniería Química",
+  "filas": []
+ },
+ "/facultades/salud/carreras/licenciatura-en-psicologia": {
+  "nombre": "Licenciatura en Psicología",
+  "filas": []
+ },
+ "/facultades/salud/carreras/licenciatura-en-nutricion": {
+  "nombre": "Licenciatura en Nutrición",
+  "filas": []
+ },
+ "/facultades/salud/carreras/licenciatura-en-enfermeria": {
+  "nombre": "Licenciatura en Enfermería",
+  "filas": []
+ },
+ "/facultades/agrarias/carreras/ingenieria-en-agroindustria": {
+  "nombre": "Ingeniería en Agroindustria",
+  "filas": []
+ },
+ "/facultades/agrarias/carreras/ingenieria-en-zootecnia": {
+  "nombre": "Ingeniería en Zootecnia",
+  "filas": []
+ },
+ "/facultades/economia/autoridades-directivos-y-funcionarios-1/licenciatura-en-contabilidad": {
+  "nombre": "Contaduría Pública",
+  "filas": []
+ },
+ "/facultades/economia/autoridades-directivos-y-funcionarios-1/licenciatura-en-administracion-de-empresa": {
+  "nombre": "Licenciatura en Administración de Empresa",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-paraguari/carreras/licenciatura-en-contabilidad": {
+  "nombre": "Licenciatura en Contabilidad y Auditoria",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-paraguari/carreras/licenciatura-en-gastronomia-hoteleria-y-turismo": {
+  "nombre": "Licenciatura en Gastronomía, Hotelería y Turismo",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-yuty/carreras/licenciatura-en-contabilida": {
+  "nombre": "Licenciatura en Contabilida",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-yuty/carreras/licenciatura-en-ciencias-de-la-educacion": {
+  "nombre": "Licenciatura en Ciencias de la Educación",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-caazapa/carreras/licenciatura-en-administracion-de-empresa": {
+  "nombre": "Licenciatura en Administración de Empresa",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-caazapa/carreras/licenciatura-en-ciencias-contables-y-auditoria": {
+  "nombre": "Licenciatura en Contabilidad y Auditoria",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-caazapa/carreras/licenciatura-en-ciencias-de-la-educacion": {
+  "nombre": "Licenciatura en Ciencias de la Educación",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-carapegua/carreras/licenciatura-en-administracion-de-empresa": {
+  "nombre": "Licenciatura en Administración de Empresa",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-carapegua/carreras/licenciatura-en-gestion-publica": {
+  "nombre": "licenciatura en Gestión Publica",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-carapegua/carreras/licenciatura-en-contabilidad-y-auditoria": {
+  "nombre": "Licenciatura en Contabilidad y Auditoria",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-carapegua/carreras/ingenieria-en-produccion-agropecuaria-y-desarrollo-rural": {
+  "nombre": "Ingeniería en Producción Agropecuaria y Desarrollo Rural",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-pedro-juan-caballero/carreras/licenciatura-en-administracion-de-empresa": {
+  "nombre": "Licenciatura en Administración de Empresa",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-pedro-juan-caballero/carreras/licenciatura-en-ciencias-de-la-educacion": {
+  "nombre": "Licenciatura en Ciencias de la Educación",
+  "filas": []
+ },
+ "/sedes/facultad-de-ciencias-sede-pedro-juan-caballero/carreras/licenciatura-en-enfermeria": {
+  "nombre": "Licenciatura en Enfermería",
+  "filas": []
+ },
+ "/escuelas/posgrado/carreras/especializacion-en-didactica-superior-universitaria": {
+  "nombre": "Especialización en Didáctica Superior Universitaria",
+  "filas": []
+ },
+ "/escuelas/posgrado/carreras/maestria-en-didactica-superior-universitaria": {
+  "nombre": "Maestría en Didáctica Superior Universitaria",
+  "filas": []
+ },
+ "/escuelas/arte/carreras/licenciatura-en-musica": {
+  "nombre": "Licenciatura en Música",
+  "filas": []
+ },
+ "/escuelas/gastronomia/carreras/licenciatura-en-hoteleria-y-turismo": {
+  "nombre": "Licenciatura en Hoteleria y Turismo",
+  "filas": []
+ },
+ "/escuelas/gastronomia/carreras/licenciatura-en-gastronomia": {
+  "nombre": "Licenciatura en Gastronomía",
+  "filas": []
+ }
+}
